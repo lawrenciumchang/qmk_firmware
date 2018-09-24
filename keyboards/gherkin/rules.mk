@@ -56,4 +56,7 @@ BACKLIGHT_ENABLE = yes  # Enable keyboard backlight functionality
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 
+## Tap Dance
+TAP_DANCE_ENABLE = yes
+
 LAYOUTS = ortho_3x10
