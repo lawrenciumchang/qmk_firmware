@@ -24,39 +24,39 @@ extern keymap_config_t keymap_config;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
- * ,-------------.
- * |   1  |  2   |
- * |------+------|
- * |   3  |  4   |
- * |------+------|
- * |   5  |  6   |
- * |------+------|
- * | FUNC |  8   |
- * `-------------'
+ * ,-------------------------------.
+ * |    Play/Pause   |  Next Track |
+ * |-----------------+-------------|
+ * |  Brightness Up  |   Vol Up    |
+ * |-----------------+-------------|
+ * | Brightness Down |   Vol Down  |
+ * |-----------------+-------------|
+ * |   FUNC Layer    |    Mute     |
+ * `-------------------------------'
  */
-[_QWERTY] = LAYOUT( \
-    KC_1,      KC_2, \
-    KC_3,      KC_4, \
-    KC_5,      KC_6, \
-    MO(_FUNC), KC_8  \
+[_QWERTY] = LAYOUT(   \
+    KC_MEDIA_PLAY_PAUSE,  KC_MEDIA_FAST_FORWARD, \
+    KC_PAUS,              KC__VOLUP, \
+    KC_SLCK,              KC__VOLDOWN, \
+    MO(_FUNC),            KC__MUTE  \
 ),
 
 /* Function
  * ,-------------.
- * |   Q  |CALDEL|
+ * |      |Sleep |
  * |------+------|
- * |   A  |TSKMGR|
+ * |      |      |
  * |------+------|
- * |   Z  |  X   |
+ * |      |      |
  * |------+------|
- * |      |  C   |
+ * |      |      |
  * `-------------'
  */
 [_FUNC] = LAYOUT( \
-    KC_Q,    CALTDEL, \
-    KC_A,    TSKMGR, \
-    KC_Z,    KC_X, \
-    _______, KC_C \
+    _______,    KC_SYSTEM_SLEEP, \
+    _______,    _______, \
+    _______,    _______, \
+    _______,    _______ \
 )
 
 };
