@@ -35,28 +35,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------------------'
  */
 [_QWERTY] = LAYOUT(   \
-    KC_MEDIA_PLAY_PAUSE,  KC_MEDIA_FAST_FORWARD, \
-    KC_PAUS,              KC__VOLUP, \
-    KC_SLCK,              KC__VOLDOWN, \
-    MO(_FUNC),            KC__MUTE  \
+    KC_MEDIA_PLAY_PAUSE, KC_MEDIA_FAST_FORWARD, \
+    KC_PAUS,             KC__VOLUP, \
+    KC_SLCK,             KC__VOLDOWN, \
+    MO(_FUNC),           KC__MUTE  \
 ),
 
 /* Function
- * ,-------------.
- * |      |Sleep |
- * |------+------|
- * |      |      |
- * |------+------|
- * |      |      |
- * |------+------|
- * |      |      |
- * `-------------'
+ * ,--------------------.
+ * | Prev Track |  Up   |
+ * |------------+-------|
+ * |    Left    | Right |
+ * |------------+-------|
+ * |            | Down  |
+ * |------------+-------|
+ * |            | Sleep |
+ * `--------------------'
  */
 [_FUNC] = LAYOUT( \
-    _______,    KC_SYSTEM_SLEEP, \
-    _______,    _______, \
-    _______,    _______, \
-    _______,    _______ \
+    KC_MEDIA_REWIND, KC_UP, \
+    KC_LEFT,    KC_RIGHT, \
+    _______,    KC_DOWN, \
+    _______,    KC_SYSTEM_SLEEP \
 )
 
 };
