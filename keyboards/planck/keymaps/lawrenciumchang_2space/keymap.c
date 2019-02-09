@@ -1,5 +1,4 @@
 #include "planck.h"
-#include "action_layer.h"
 
 enum planck_layers {
   _BASE,
@@ -68,10 +67,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------------------------------------------------------------------------'
  */
 [_L2] = LAYOUT_planck_grid(
-    __, __,      __,      __,      __,      __, __,   __, KC_7, KC_8, KC_9, KC_SLEP,
-		__, __,      __,      __,      __,      __, __,   __, KC_4, KC_5, KC_6, KC_VOLU,
-		__, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, __, __,   __, KC_1, KC_2, KC_3, KC_VOLD,
-		__, __,      __,      __,      __,      __, __,   __, KC_0, KC_0, __,   __
+    __, __,      __,      __,      __,      __, __,   __, KC_7, KC_8, KC_9,   KC_SLEP,
+		__, __,      __,      __,      __,      __, __,   __, KC_4, KC_5, KC_6,   KC_VOLU,
+		__, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, __, __,   __, KC_1, KC_2, KC_3,   KC_VOLD,
+		__, __,      __,      __,      __,      __, __,   __, KC_0, KC_0, KC_DOT, __
 )
 
 };
