@@ -20,6 +20,8 @@ enum custom_keycodes {
 #define L1 MO(_L1)
 #define L2 MO(_L2)
 
+// NOTE: Keymappings are mirrored by row. For some reason,zgbatttttttrrffrttttttttttb flashing to the Levinson mirrored everything on both master and slave unit.
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_ortho_4x12( \
