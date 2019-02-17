@@ -12,7 +12,6 @@ enum planck_keycodes {
   L2
 };
 
-
 #define __ KC_TRNS
 #define L1 MO(_L1)
 #define L2 MO(_L2)
