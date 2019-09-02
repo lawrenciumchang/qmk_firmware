@@ -33,10 +33,6 @@ enum custom_keycodes {
 #define KC_CTQT   CTL_T(KC_QUOTE)
 #define KC_SFTT   SFT_T(KC_ESC)
 
-#define KC_PRV    KC_MEDIA_REWIND
-#define KC_PLY    KC_MEDIA_PLAY_PAUSE
-#define KC_NXT    KC_MFFD
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
