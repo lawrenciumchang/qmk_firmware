@@ -14,5 +14,6 @@
         "*.hpp": "cpp",
         "xstddef": "c",
         "__locale": "c"
-    }
+    },
+    "python.pythonPath": "/usr/local/bin/python3"
 }
