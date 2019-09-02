@@ -54,11 +54,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------.                ,-----------------------------------------.
          __,  EXLM,    AT,  HASH,   DLR,  PERC,                   CIRC,  AMPR,    UP,  LPRN,  RPRN,   DEL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-         __,  BSLS,   GRV,  MINS,   EQL,  LBRC,                   RBRC,  LEFT,  DOWN, RIGHT,  ASTR,    __,\
+         __,  BSLS,   GRV,  MINS,   EQL,  LBRC,                   RBRC,  LEFT,  DOWN, RIGHT,  ASTR,  CAPS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
          __,  PIPE,  TILD,  UNDS,  PLUS,  LCBR,                   RCBR,  SLCK,  PAUS,  VOLD,  VOLU,    __,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                     __,    __,    __,       __,    __,    __ \
+                                     __,   SPC,   SPC,       __,    __,    __ \
                               //`--------------------'  `--------------------'
   ),
 
@@ -137,10 +137,10 @@ void iota_gfx_task_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
-#ifdef SSD1306OLED
-    set_keylog(keycode, record);
-#endif
-    // set_timelog();
+    #ifdef SSD1306OLED
+        set_keylog(keycode, record);
+    #endif
+        // set_timelog();
   }
 
   switch (keycode) {
@@ -169,4 +169,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
-
