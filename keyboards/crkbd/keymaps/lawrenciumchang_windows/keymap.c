@@ -16,14 +16,18 @@ extern uint8_t is_master;
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
-#define _BASE 0
+#define _BASE  0
 #define _LOWER 3
 #define _RAISE 4
+#define _GAME  5
+#define _NAV   6
 
 enum custom_keycodes {
   BASE,
   LOWER,
-  RAISE
+  RAISE,
+  GAME,
+  NAV
 };
 
 #define KC___     KC_TRNS
@@ -33,7 +37,7 @@ enum custom_keycodes {
 #define KC_SFTT   SFT_T(KC_ESC)
 
 #define KC_GAME   TG(_GAME)
-#define KC_BASE   TG(_BASE)
+#define KC_RSRT   TO(_BASE)
 #define KC_NAV    MO(_NAV)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -81,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
         __,    __,    __,    __,    __,    __,                     __,    __,    __,    __,    __,    __,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                    __,   ENT,     F,        J,   NAV,  BASE \
+                                    __,   ENT,     F,        J,   NAV,  RSRT \
                               //`--------------------'  `--------------------'
   ),
 
