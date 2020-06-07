@@ -35,6 +35,7 @@ enum custom_keycodes {
 #define KC_RAISE  RAISE
 
 #define KC_SFTT   SFT_T(KC_ESC)
+#define KC_QALT   ALT_T(KC_QUOTE)
 
 #define KC_GAME   TG(_GAME)
 #define KC_RSRT   TO(_BASE)
@@ -45,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------.                ,-----------------------------------------.
         TAB,     Q,     W,     E,     R,     T,                      Y,     U,     I,     O,     P,  BSPC,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      LOWER,     A,     S,     D,     F,     G,                      H,     J,     K,     L,  SCLN, QUOTE,\
+      LOWER,     A,     S,     D,     F,     G,                      H,     J,     K,     L,  SCLN,  QALT,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        SFTT,     Z,     X,     C,     V,     B,                      N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
