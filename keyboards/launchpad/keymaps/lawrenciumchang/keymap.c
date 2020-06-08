@@ -21,6 +21,10 @@ extern keymap_config_t keymap_config;
 #define CALTDEL LCTL(LALT(KC_DEL))
 #define TSKMGR LCTL(LSFT(KC_ESC))
 
+enum custom_keycodes {
+  SNAPCAM
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
@@ -47,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------------+-------|
  * |    Left    | Right |
  * |------------+-------|
- * |            | Down  |
+ * | Snap Camera| Down  |
  * |------------+-------|
  * |            | Sleep |
  * `--------------------'
@@ -55,12 +59,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_FUNC] = LAYOUT( \
     KC_MEDIA_REWIND, KC_UP, \
     KC_LEFT,    KC_RIGHT, \
-    _______,    KC_DOWN, \
+    SNAPCAM,    KC_DOWN, \
     _______,    KC_SYSTEM_SLEEP \
 )
 
 };
 
-void matrix_init_user(void) {
-
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case SNAPCAM:
+      if (record->event.pressed) {
+        register_code(KC_LCTRL);
+        register_code(KC_LALT);
+        register_code(KC_KP_0);
+      } else {
+        unregister_code(KC_LCTRL);
+        unregister_code(KC_LALT);
+        unregister_code(KC_KP_0);
+      }
+      return false;
+      break;
+  }
+  return true;
 }
